@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import background from "./img/background.jpg";
-import { Button, InputLabel, Backdrop } from "@mui/material";
+import { Button, InputLabel } from "@mui/material";
 import welcome from "./img/welcome.jpg";
 
 
@@ -18,7 +18,6 @@ const appStyles = {
 const appWelcome = {
   backgroundImage: `url(${welcome})`,
   backgroundSize: "contain", // Esto hará que la imagen se extienda para cubrir todo el fondo
-  backgroundRepeat: "no-repeat",
   height: "100vh", // Altura igual al 100% de la ventana visible
   display: "flex",
   justifyContent: "center",
@@ -29,7 +28,7 @@ const appWelcome = {
 const styles = {
   container: {
     alignItems: "center",
-    gap: "16px",
+    gap: "1rem",
     background: "#fff",
   },
   button: {
@@ -39,7 +38,7 @@ const styles = {
     color: "#fff",
   },
   label: {
-    fontSize: "3rem",
+    fontSize: "1rem",
     fontFamily: "Gothic",
     alignItems: "center",
     color: "#fff", // Color del texto
@@ -49,7 +48,7 @@ const styles = {
     fontFamily: "Gothic",
     justifyContent: "center",
     display: "flex",
-    fontSize: "2.5rem",
+    fontSize: "1rem",
     color: "purple", // Color del texto
   },
 };
@@ -67,7 +66,7 @@ function App() {
 
   const handleLogin = () => {
 
-    if (birthdate == "1999-06-20") {
+    if (birthdate === "1999-06-20") {
       setShowInputs(false);
       setError("");
     } else {
