@@ -39,15 +39,15 @@ const styles = {
   },
   label: {
     fontSize: "1rem",
-    fontFamily: "Gothic",
     alignItems: "center",
+    fontWeight: "bold",
     color: "#fff", // Color del texto
   },
   error: {
     alignItems: "center",
-    fontFamily: "Gothic",
     justifyContent: "center",
     display: "flex",
+    fontWeight: "bold",
     fontSize: "1rem",
     color: "purple", // Color del texto
   },
@@ -79,7 +79,7 @@ function App() {
       {showInputs && (
         <div style={appStyles}>
           <div>
-            <InputLabel style={styles.label}>Ingresa la fecha correcta, Amy</InputLabel>
+            <InputLabel style={styles.label}>Ingresa la fecha correcta, Amy &lt;3</InputLabel>
             <input
               type="date"
               value={birthdate}
@@ -92,8 +92,9 @@ function App() {
             >
               Ingresar
             </Button>
+            <br />
+            <p style={styles.error}>{error} </p>
           </div>
-          <p style={styles.error}>{error} </p>
         </div>
       )}
       {!showInputs && <div style={appWelcome}></div>}
